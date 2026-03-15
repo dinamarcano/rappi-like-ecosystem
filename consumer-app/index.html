@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Consumer App</h1>
+
+<button onclick="getStores()">View Stores</button>
+
+<script>
+async function getStores(){
+ const res = await fetch("http://localhost:3000/stores");
+ const data = await res.json();
+ console.log(data);
+}
+</script>
+
+</body>
+</html>

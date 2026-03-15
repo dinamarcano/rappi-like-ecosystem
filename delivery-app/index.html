@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Delivery App</h1>
+
+<button onclick="getAvailableOrders()">Available Orders</button>
+
+<script>
+async function getAvailableOrders(){
+ const res = await fetch("http://localhost:3000/orders/available");
+ const data = await res.json();
+ console.log(data);
+}
+</script>
+
+</body>
+</html>
